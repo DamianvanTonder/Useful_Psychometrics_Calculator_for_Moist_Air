@@ -2,15 +2,11 @@
 
 A Python module for calculating thermodynamic properties of moist air, based on ASHRAE Handbook of Fundamentals 2009, Chapter 1.
 
----
-
 ## _Overview_
 
 This module provides a single public function — `state()` — that accepts any two independent psychrometric properties and an atmospheric pressure, then returns all six standard properties of the moist air state.
 
 All inputs and outputs use base SI units.
-
----
 
 ## _Units_
 
@@ -27,8 +23,6 @@ All inputs and outputs use base SI units.
 | Pw     | Water vapor partial pressure | Pascals (Pa)       |
 
 > Note: Relative humidity is a decimal fraction, not a percentage. `0.5` means 50% RH.
-
----
 
 ## _Public API_
 
@@ -65,8 +59,6 @@ A list of six values in the following order:
 | 4     | W                 | kg/kg  |
 | 5     | WBT               | K      |
 
----
-
 ## _Example Usage_
 
 ```python
@@ -91,8 +83,6 @@ print(f"Relative Humidity:{RH*100:.1f} %")
 print(f"Specific Volume:  {V:.4f} m³/kg")
 ```
 
----
-
 ## _Supported Property Pairs_
 
 Any combination of two independent properties from the list below is valid:
@@ -105,8 +95,6 @@ Any combination of two independent properties from the list below is valid:
 | W   |     |   | — | ✓ | ✓ |
 | V   |     |   |   | — | ✓ |
 
----
-
 ## _Temperature Limits_
 
 The module is valid over the following dry bulb temperature range:
@@ -118,8 +106,6 @@ The module is valid over the following dry bulb temperature range:
 
 Inputs outside this range will cause the calculation to return `None`.
 
----
-
 ## _ASHRAE References_
 
 | Function             | Reference                            |
@@ -130,8 +116,6 @@ Inputs outside this range will cause the calculation to return `None`.
 | Wet bulb temperature | ASHRAE 2009 Ch.1, Eq. 35             |
 | Specific enthalpy    | ASHRAE 2009 Ch.1, Eq. 32             |
 | Dew point            | ASHRAE 2009 Ch.1, Eq. 39             |
-
----
 
 ## _Notes_
 
